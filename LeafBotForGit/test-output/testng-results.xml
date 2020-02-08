@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="21304" started-at="2020-02-08T09:23:01Z" finished-at="2020-02-08T09:23:22Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.leafBot.testcases.TC008_TestLogin@210366b4]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="21304" started-at="2020-02-08T09:23:01Z" finished-at="2020-02-08T09:23:22Z">
+      <class name="com.leafBot.testcases.TC008_TestLogin">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.leafBot.testcases.TC008_TestLogin@210366b4]" name="startReport" is-config="true" duration-ms="282" started-at="2020-02-08T09:23:00Z" finished-at="2020-02-08T09:23:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="setValues()[pri:0, instance:com.leafBot.testcases.TC008_TestLogin@210366b4]" name="setValues" is-config="true" duration-ms="1" started-at="2020-02-08T09:23:01Z" finished-at="2020-02-08T09:23:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setValues -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.leafBot.testcases.TC008_TestLogin@210366b4]" name="setUpClass" is-config="true" duration-ms="82" started-at="2020-02-08T09:23:01Z" finished-at="2020-02-08T09:23:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="report()[pri:0, instance:com.leafBot.testcases.TC008_TestLogin@210366b4]" name="report" is-config="true" duration-ms="5" started-at="2020-02-08T09:23:01Z" finished-at="2020-02-08T09:23:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.leafBot.testcases.TC008_TestLogin@210366b4]" name="beforeMethod" is-config="true" duration-ms="12804" started-at="2020-02-08T09:23:01Z" finished-at="2020-02-08T09:23:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="makeLogin(java.lang.String, java.lang.String)[pri:0, instance:com.leafBot.testcases.TC008_TestLogin@210366b4]" name="makeLogin" duration-ms="8190" started-at="2020-02-08T09:23:14Z" data-provider="fetchData" finished-at="2020-02-08T09:23:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kumar.testleaf@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[leaf@12]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- makeLogin -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.leafBot.testcases.TC008_TestLogin@210366b4]" name="afterMethod" is-config="true" duration-ms="167" started-at="2020-02-08T09:23:22Z" finished-at="2020-02-08T09:23:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.leafBot.testcases.TC008_TestLogin@210366b4]" name="tearDownClass" is-config="true" duration-ms="7" started-at="2020-02-08T09:23:22Z" finished-at="2020-02-08T09:23:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="stopReport()[pri:0, instance:com.leafBot.testcases.TC008_TestLogin@210366b4]" name="stopReport" is-config="true" duration-ms="264" started-at="2020-02-08T09:23:22Z" finished-at="2020-02-08T09:23:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopReport -->
+      </class> <!-- com.leafBot.testcases.TC008_TestLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
