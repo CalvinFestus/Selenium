@@ -17,7 +17,7 @@ public class Day1Myntra {
 
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 
-		//disable notifications
+		//disable notifications further
 		ChromeOptions op = new ChromeOptions();
 		op.addArguments("--disable-notifications");
 
