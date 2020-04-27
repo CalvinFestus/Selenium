@@ -22,7 +22,7 @@ public class Day1Myntra {
 		op.addArguments("--disable-notifications");
 
 		//Launch URL
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(op);
 		driver.get("https://www.myntra.com/");
 
 		//Maximize Window and Add implicit wait
@@ -125,7 +125,7 @@ public class Day1Myntra {
 9) Close the pop-up x
 10) Confirm all the Coats are of brand MANGO
     findElements (brand) -> List<WebElement> 
-    foreach -> getText of each brand 
+    for each -> getText of each brand 
     compare > if(condition)
 11) Sort by Better Discount
 12) Find the price of first displayed item
