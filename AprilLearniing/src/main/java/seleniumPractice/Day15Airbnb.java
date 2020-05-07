@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +15,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class Day15Airbnb {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		System.setProperty("webdriver.chrome.silentOutput", "true");
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
@@ -27,78 +28,116 @@ public class Day15Airbnb {
 		driver.get("https://www.airbnb.co.in/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
+		driver.findElementByXPath("//button[@class='optanon-allow-all accept-cookies-button']").click();
+		Thread.sleep(2000);
+		
 		driver.findElementById("bigsearch-query-attached-query").sendKeys("Coorg");
+		Thread.sleep(2000);
 
 		driver.findElementByXPath("//ul[@role='listbox']/li[1]/div[2]").click();
+		Thread.sleep(2000);
 
 		driver.findElementByXPath("//td[contains(@aria-label,'June 1, 2020')]").click();
+		Thread.sleep(2000);
 
 		driver.findElementByXPath("//td[contains(@aria-label,'June 5, 2020')]").click();
+		Thread.sleep(2000);
 
 		driver.findElementByXPath("//div[text()='Guests']").click();
+		Thread.sleep(2000);
 
 		for(int i=0;i<3;i++) {
 
-			driver.findElementByXPath("(//button[@type='button'])[5]").click();
+			driver.findElementByXPath("(//button[@aria-label='increase value'])[1]").click();
+			Thread.sleep(2000);
 
 		}
-
-		for(int i=0;i<3;i++) {
-
-			driver.findElementByXPath("(//button[@type='button'])[7]").click();
-
-		}
-
-		driver.findElementByXPath("//button[@type='submit']").click();
-
-		driver.findElementByXPath("(//span[text()='Cancellation flexibility'])[1]").click();
-
-		driver.findElementByXPath("//button[@id='filterItem-switch-flexible_cancellation-true']").click();
-
-		driver.findElementByXPath("//button[@id='filter-panel-save-button']").click();
-
-		driver.findElementByXPath("(//span[text()='Type of place'])[1]").click();
-
-		driver.findElementByXPath("//div[text()='Entire place']").click();
-
-		driver.findElementByXPath("//button[@id='filter-panel-save-button']").click();
-
-		driver.findElementByXPath("(//span[text()='Price'])[1]").click();
-
-		driver.findElementByXPath("//input[@id='price_filter_min']").clear();
-		driver.findElementByXPath("//input[@id='price_filter_min']").sendKeys("3000");
-
-		driver.findElementByXPath("//input[@id='price_filter_max']").clear();
-		driver.findElementByXPath("//input[@id='price_filter_max']").sendKeys("5000");
-
-		driver.findElementByXPath("//button[@id='filter-panel-save-button']").click();
-
-		driver.findElementByXPath("(//span[text()='More filters'])[1]").click();
 
 		for(int i=0;i<3;i++) {
 
 			driver.findElementByXPath("(//button[@aria-label='increase value'])[2]").click();
+			Thread.sleep(2000);
+
+		}
+
+		driver.findElementByXPath("//button[@type='submit']").click();
+		Thread.sleep(2000);
+
+		driver.findElementByXPath("(//span[text()='Cancellation flexibility'])[1]").click();
+		Thread.sleep(2000);
+
+		driver.findElementByXPath("//button[@id='filterItem-switch-flexible_cancellation-true']").click();
+		Thread.sleep(2000);
+
+		driver.findElementByXPath("//button[@id='filter-panel-save-button']").click();
+		Thread.sleep(2000);
+
+		driver.findElementByXPath("(//span[text()='Type of place'])[1]").click();
+		Thread.sleep(2000);
+
+		driver.findElementByXPath("//div[text()='Entire place']").click();
+		Thread.sleep(2000);
+
+		driver.findElementByXPath("//button[@id='filter-panel-save-button']").click();
+		Thread.sleep(2000);
+
+		driver.findElementByXPath("(//span[text()='Price'])[1]").click();
+		Thread.sleep(2000);
+		
+		for(int i=0;i<3;i++) {
+			driver.findElementByXPath("//input[@id='price_filter_min']").sendKeys(Keys.BACK_SPACE);
+			Thread.sleep(2000);
+		}
+		
+		driver.findElementByXPath("//input[@id='price_filter_min']").sendKeys("3000");
+		Thread.sleep(2000);
+		
+		for(int i=0;i<7;i++) {
+			driver.findElementByXPath("//input[@id='price_filter_max']").sendKeys(Keys.BACK_SPACE);
+			Thread.sleep(2000);
+		}
+		
+		driver.findElementByXPath("//input[@id='price_filter_max']").sendKeys("5000");
+		Thread.sleep(2000);
+
+		driver.findElementByXPath("//button[@id='filter-panel-save-button']").click();
+		Thread.sleep(2000);
+
+		driver.findElementByXPath("(//span[text()='More filters'])[1]").click();
+		Thread.sleep(2000);
+
+		for(int i=0;i<3;i++) {
+
+			driver.findElementByXPath("(//button[@aria-label='increase value'])[2]").click();
+			Thread.sleep(2000);
 
 		}
 
 		for(int i=0;i<3;i++) {
 
 			driver.findElementByXPath("(//button[@aria-label='increase value'])[3]").click();
+			Thread.sleep(2000);
 
 		}
 
 		driver.findElementByXPath("//div[text()='Kitchen']").click();
+		Thread.sleep(2000);
 
 		driver.findElementByXPath("//div[text()='Free parking on premises']").click();
+		Thread.sleep(2000);
 
 		driver.findElementByXPath("//div[text()='House']").click();
+		Thread.sleep(2000);
 
 		driver.findElementByXPath("//div[text()='English']").click();
+		Thread.sleep(2000);
 
-		driver.findElementByXPath("(//button[@type='button'])[33]").click();
+		driver.findElementByXPath("//button[contains(text(),'Show')]").click();
+		Thread.sleep(2000);
 
 		driver.findElementByXPath("(//a[@aria-label='Prahari Nivas, the complete house'])[1]").click();
+		Thread.sleep(2000);
 
 		Set<String> winHan = driver.getWindowHandles();
 		List<String> li = new ArrayList<String>();
@@ -107,9 +146,10 @@ public class Day15Airbnb {
 		driver.switchTo().window(li.get(1));
 
 		driver.findElementByXPath("//a[contains(text(),'amenities')]").click();
+		Thread.sleep(2000);
 
-		List<WebElement> amenities = driver.findElementsByXPath("//h4[text()='Not included']/following::del");
-
+		List<WebElement> amenities = driver.findElementsByXPath("//*[text()='Not included']/following::del");
+		System.out.println("Amenities Not Included are:");
 		for(int i=0;i<amenities.size();i++) {
 
 			String notIncludedAmenities = amenities.get(i).getText();
@@ -135,13 +175,27 @@ public class Day15Airbnb {
 		
 		String guests = driver.findElementByXPath("//div[text()='Guests']/following::div[2]").getText();
 		
-		if(guests.contains("9")) {
+		if(guests.contains("6")) {
 
 			System.out.println("Number of Guests are verified");
 		}
 
 
-
+		List<WebElement> sleepArrangements = driver.findElementsByXPath("//*[text()='Sleeping arrangements']/following::div[contains(text(),'Bedroom')]");
+		System.out.println("Sleeping arrangements");
+		for(int i=0;i<sleepArrangements.size();i++) {
+			
+			WebElement bedRoom = driver.findElementByXPath("(//*[text()='Sleeping arrangements']/following::div[contains(text(),'Bedroom')])["+(i+1)+"]");
+			WebElement noOfCot = driver.findElementByXPath("(//*[text()='Sleeping arrangements']/following::div[contains(text(),'Bedroom')])["+(i+1)+"]/following::div[1]");
+			System.out.println(bedRoom.getText()+" has "+noOfCot.getText());
+			
+			if((i+1)>3) {
+				
+			}
+			
+		}
+		
+		driver.quit();
 
 
 	}

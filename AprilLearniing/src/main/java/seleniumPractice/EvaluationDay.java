@@ -118,7 +118,7 @@ public class EvaluationDay {
 		driver.findElementByXPath("//div[@class='btn-gold']").click();
 		Thread.sleep(8000);
 		
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebDriverWait wait = new WebDriverWait(driver, 15);
 		WebElement goToBag = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='btn-cart']")));
 		goToBag.click();
 		Thread.sleep(2000);
